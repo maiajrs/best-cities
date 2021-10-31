@@ -1,5 +1,6 @@
 import { Text, Flex, Image, Stack, Box, HStack } from "@chakra-ui/react";
 import { Header } from "../components/Header";
+import Slide from "../components/Slide";
 
 export default function Home() {
   return (
@@ -77,6 +78,9 @@ export default function Home() {
           </Flex>
           <Text ml={30} color="gray.700" fontSize="36" textAlign="center">Vamos nessa?</Text>
           <Text ml={30}color="gray.700" fontSize="36" textAlign="center">Então escolha seu continente</Text>
+        </Flex>
+        <Flex width="1440px" align="center" justify="center" py="20" height="800px">
+          <Slide />
         </Flex>
       </Flex>
     </Flex>
