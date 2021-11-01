@@ -12,38 +12,44 @@ export default function Home() {
       position="relative"
     >
       <Header />
-      <Flex as="main" height="100%" width="100%" direction="column">
-        <Box
-          backgroundImage="images/Background.png"
-          backgroundRepeat="no-repeat"
+      <Flex
+        as="section"
+        width="100%"
+        position="relative"
+        mx="auto"
+        justify="center"
+        align="center"
+      >
+        <Image
+          src="images/Background.png"
+          alt="céu noturno estrelado background"
           width="100%"
-          height="335px"
+          display="block"
+        />
+        <Flex
+          height="100%"
+          width="100%"
+          maxWidth="1160px"
+          mx="auto"
+          align="center"
+          position="absolute"
         >
-          <Flex
-            height="100%"
-            width="100%"
-            maxWidth="1240px"
-            mx="auto"
-            px="10"
-            align="center"
-            position="relative"
-          >
-            <HStack spacing="30">
-              <Stack spacing="5" maxWidth="450px">
-                <Text fontSize="32" color="gray.50">
-                  5 Continentes, <br /> infinitas possibilidades.
-                </Text>
-                <Text>
-                  Chegou a hora de tirar do papel a viagem que você sempre
-                  sonhou.{" "}
-                </Text>
-              </Stack>
-              <Stack position="absolute" right="30px" bottom="-30">
-                <Image src="images/Airplane.svg" alt="Airplane" />
-              </Stack>
-            </HStack>
-          </Flex>
-        </Box>
+          <HStack spacing="30">
+            <Stack spacing="5" maxWidth="450px">
+              <Text fontSize="32" color="gray.50" textAlign="left">
+                5 Continentes, <br /> infinitas possibilidades.
+              </Text>
+              <Text textAlign="left">
+                Chegou a hora de tirar do papel a viagem que você sempre sonhou.{" "}
+              </Text>
+            </Stack>
+            <Stack position="absolute" right="30px" bottom="-30">
+              <Image src="images/Airplane.svg" alt="Airplane" />
+            </Stack>
+          </HStack>
+        </Flex>
+      </Flex>
+      <Flex as="main" height="100%" width="100%" direction="column">
         <Flex
           as="section"
           width="100%"
@@ -56,7 +62,7 @@ export default function Home() {
             spacing="auto"
             align="center"
             width="100%"
-            maxWidth="1240px"
+            maxWidth="1160px"
             mx="auto"
             justify="center"
           >
@@ -76,10 +82,20 @@ export default function Home() {
           >
             <Image ml={35} src="images/Divider.svg" alt="Divider" />
           </Flex>
-          <Text ml={30} color="gray.700" fontSize="36" textAlign="center">Vamos nessa?</Text>
-          <Text ml={30}color="gray.700" fontSize="36" textAlign="center">Então escolha seu continente</Text>
+          <Text ml={30} color="gray.700" fontSize="36" textAlign="center">
+            Vamos nessa?
+          </Text>
+          <Text ml={30} color="gray.700" fontSize="36" textAlign="center">
+            Então escolha seu continente
+          </Text>
         </Flex>
-        <Flex width="1440px" align="center" justify="center" py="20" height="800px">
+        <Flex
+          maxWidth="1440px"
+          align="center"
+          justify="center"
+          py="20"
+          height="800px"
+        >
           <Slide />
         </Flex>
       </Flex>
