@@ -61,6 +61,7 @@ export default function Slide() {
         </SwiperSlide>
         <SwiperSlide>
           <img
+            styles="width: 100%; "
             src="/images/america_norte/america-norte-capa.jpg"
             alt="america do norte"
           />
