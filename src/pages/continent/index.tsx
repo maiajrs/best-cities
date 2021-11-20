@@ -1,4 +1,4 @@
-import { Flex, Image, Text, Box, HStack} from "@chakra-ui/react";
+import { Flex, Image, Text, Box, HStack } from "@chakra-ui/react";
 import { Header } from "../../components/Header";
 
 export default function Continent() {
@@ -32,8 +32,13 @@ export default function Continent() {
           </Text>
         </Flex>
       </Flex>
-      <Flex as="main" maxWidth="1160px" mx="auto" py="20">
-        <HStack spacing="8" as="section" gridTemplateColumns="1fr 1fr" display="grid">
+      <Flex as="main" maxWidth="1160px" mx="auto" py="20" direction="column">
+        <HStack
+          spacing="8"
+          as="section"
+          gridTemplateColumns="1fr 1fr"
+          display="grid"
+        >
           <Box>
             <Text>
               A Europa é, por convenção, um dos seis continentes do mundo.
@@ -44,22 +49,267 @@ export default function Continent() {
             </Text>
           </Box>
           <Box>
-              <HStack spacing="auto">
-                <Flex direction="column">
-                    <Text color="yellow.400" textAlign="center" fontWeight="500" fontSize="48" lineHeight="72px">50</Text>
-                    <Text fontWeight="500">países</Text>
-                </Flex>
-                <Flex direction="column">
-                    <Text color="yellow.400" textAlign="center" fontWeight="500" fontSize="48" lineHeight="72px">60</Text>
-                    <Text fontWeight="500">línguas</Text>
-                </Flex>
-                <Flex direction="column">
-                    <Text color="yellow.400" textAlign="center" fontWeight="500" fontSize="48" lineHeight="72px">27</Text>
-                    <Text fontWeight="500">cidades + 100</Text>
-                </Flex>
-              </HStack>
+            <HStack spacing="auto">
+              <Flex direction="column">
+                <Text
+                  color="yellow.400"
+                  textAlign="center"
+                  fontWeight="500"
+                  fontSize="48"
+                  lineHeight="72px"
+                >
+                  50
+                </Text>
+                <Text fontWeight="500">países</Text>
+              </Flex>
+              <Flex direction="column">
+                <Text
+                  color="yellow.400"
+                  textAlign="center"
+                  fontWeight="500"
+                  fontSize="48"
+                  lineHeight="72px"
+                >
+                  60
+                </Text>
+                <Text fontWeight="500">línguas</Text>
+              </Flex>
+              <Flex direction="column">
+                <Text
+                  color="yellow.400"
+                  textAlign="center"
+                  fontWeight="500"
+                  fontSize="48"
+                  lineHeight="72px"
+                >
+                  27
+                </Text>
+                <Text fontWeight="500">cidades + 100</Text>
+              </Flex>
+            </HStack>
           </Box>
         </HStack>
+        <Flex my="20" direction="column">
+          <Box>
+            <Text fontSize="36" as="h1">
+              Cidades +100
+            </Text>
+          </Box>
+          <Flex as="section" my="4" flexDirection="column">
+            <HStack spacing="45" flexWrap="wrap" my="">
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/londres.png"
+                  alt="Londres"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/reino-unido.png"
+                    alt="reino-unido"
+                  ></Image>
+                </Flex>
+              </Flex>
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/paris.png"
+                  alt="Paris"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/franca.png"
+                    alt="França"
+                  ></Image>
+                </Flex>
+              </Flex>
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/roma.png"
+                  alt="Roma"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/italia.png"
+                    alt="Italia"
+                  ></Image>
+                </Flex>
+              </Flex>
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/praga.png"
+                  alt="Praga"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/republica-tcheca.png"
+                    alt="Republica-Tcheca"
+                  ></Image>
+                </Flex>
+              </Flex>
+            </HStack>
+            <HStack spacing="45" flexWrap="wrap" my="12">
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/londres.png"
+                  alt="Londres"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/reino-unido.png"
+                    alt="reino-unido"
+                  ></Image>
+                </Flex>
+              </Flex>
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/paris.png"
+                  alt="Paris"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/franca.png"
+                    alt="França"
+                  ></Image>
+                </Flex>
+              </Flex>
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/roma.png"
+                  alt="Roma"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/italia.png"
+                    alt="Italia"
+                  ></Image>
+                </Flex>
+              </Flex>
+              <Flex direction="column">
+                <Image
+                  borderRadius="4px 4px 0 0"
+                  src="images/europa/praga.png"
+                  alt="Praga"
+                ></Image>
+                <Flex
+                  justify="space-between"
+                  px="4"
+                  py="4"
+                  border="1px solid #FFBA08"
+                  borderTop="none"
+                  borderRadius="0px 0px 4px 4px"
+                >
+                  <Flex direction="column">
+                    <Text>Londres</Text>
+                    <Text>Reino Unido</Text>
+                  </Flex>
+                  <Image
+                    width="30px"
+                    height="30px"
+                    src="images/europa/republica-tcheca.png"
+                    alt="Republica-Tcheca"
+                  ></Image>
+                </Flex>
+              </Flex>
+            </HStack>
+          </Flex>
+        </Flex>
       </Flex>
     </Flex>
   );
