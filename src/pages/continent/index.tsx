@@ -1,4 +1,24 @@
-import { Flex, Image, Text, Box, HStack } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Text,
+  Link,
+  Box,
+  Icon,
+  HStack,
+  Button,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  color,
+} from "@chakra-ui/react";
+import { RiInformationLine } from "react-icons/ri";
+
 import { Header } from "../../components/Header";
 
 export default function Continent() {
@@ -84,7 +104,26 @@ export default function Continent() {
                 >
                   27
                 </Text>
-                <Text fontWeight="500">cidades + 100</Text>
+                <Text fontWeight="500" display="flex" alignItems="center" >
+                  cidades + 100{" "}
+                  {
+                    <Popover>
+                      <PopoverTrigger>
+                        <Button _active={{background: "white"}} _focus={{boxShadow: "none"}} boxShadow="none" background="white" _hover={{color: "white"}}>{<Icon background="white" fontSize="24" _hover={{color: "yellow.400"}} as={RiInformationLine} />}</Button>
+                      </PopoverTrigger>
+                      <PopoverContent _focus={{boxShadow: "none"}}>
+                        <PopoverArrow  />
+                        <PopoverCloseButton />
+                        <PopoverHeader textAlign="center">Veja mais cidades</PopoverHeader>
+                        <PopoverBody>
+                          <Link>
+                          Clique para ver todas as cidades!</Link>
+                          
+                        </PopoverBody>
+                      </PopoverContent>
+                    </Popover>
+                  }
+                </Text>
               </Flex>
             </HStack>
           </Box>
