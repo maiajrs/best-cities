@@ -1,8 +1,22 @@
-import { Text, Flex, Image, Stack, Box, HStack } from "@chakra-ui/react";
+import {
+  Text,
+  Flex,
+  Image,
+  Stack,
+  HStack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import base from "@emotion/styled/types/base";
 import { Header } from "../components/Header";
 import Slide from "../components/Slide";
 
 export default function Home() {
+  const isSmallVersion = useBreakpointValue({
+    base: false,
+    md: true,
+    lg: true,
+  });
+  
   return (
     <Flex
       direction="column"
@@ -25,6 +39,7 @@ export default function Home() {
           alt="céu noturno estrelado background"
           width="100%"
           display="block"
+          minHeight="250"
         />
         <Flex
           height="100%"
@@ -34,18 +49,25 @@ export default function Home() {
           align="center"
           position="absolute"
         >
-          <HStack spacing="30">
-            <Stack spacing="5" maxWidth="450px">
-              <Text fontSize="32" color="gray.50" textAlign="left">
+          <HStack spacing="30" px="2">
+            <Stack spacing="5" maxWidth="450px" m={{base: "auto", md: "4"}} py="8">
+              <Text fontSize="32" color="gray.50" textAlign={{base: "center", md: "left"}}>
                 5 Continentes, <br /> infinitas possibilidades.
               </Text>
-              <Text textAlign="left">
+              <Text textAlign={{base: "center", md: "left"}}>
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.{" "}
               </Text>
             </Stack>
-            <Stack position="absolute" right="30px" bottom="-30">
-              <Image src="images/Airplane.svg" alt="Airplane" />
-            </Stack>
+            {isSmallVersion && (
+              <Stack
+                position="absolute"
+                right="30px"
+                bottom="-30"
+                w={[200, 250, 325, 500]}
+              >
+                <Image src="images/Airplane.svg" alt="Airplane" />
+              </Stack>
+            )}
           </HStack>
         </Flex>
       </Flex>
@@ -55,23 +77,28 @@ export default function Home() {
           width="100%"
           maxWidth="1440px"
           align="center"
-          my="20"
+          my={["8", "16", "20"]}
           direction="column"
         >
-          <HStack
+          <Flex
             spacing="auto"
             align="center"
             width="100%"
             maxWidth="1160px"
-            mx="auto"
             justify="center"
+            px="2"
+            display={{base: "grid", md: "flex"}}
+            direction={{base: "column", md: "row"}}
+            gridTemplateColumns="1fr 1fr"
+            gridGap={["4", "8", "12",  "20"]}
+
           >
-            <Image src="images/Nightlife.svg" alt="Nightlife" />
-            <Image src="images/Beach.svg" alt="Beach" />
-            <Image src="images/Modern.svg" alt="Modern" />
-            <Image src="images/Classic.svg" alt="Classic" />
-            <Image src="images/More.svg" alt="More" />
-          </HStack>
+            <Image justifySelf="center" src="images/Nightlife.svg" alt="Nightlife" />
+            <Image justifySelf="center"  src="images/Beach.svg" alt="Beach" />
+            <Image justifySelf="center"  src="images/Modern.svg" alt="Modern" />
+            <Image justifySelf="center"  src="images/Classic.svg" alt="Classic" />
+            <Image justifySelf="center"  src="images/More.svg" alt="More" />
+          </Flex>
           <Flex
             justify="center"
             align="center"
@@ -82,10 +109,10 @@ export default function Home() {
           >
             <Image ml={35} src="images/Divider.svg" alt="Divider" />
           </Flex>
-          <Text ml={30} color="gray.700" fontSize="36" textAlign="center">
+          <Text ml={30} color="gray.700" fontSize={{base: "24", md: "36"}} textAlign="center">
             Vamos nessa?
           </Text>
-          <Text ml={30} color="gray.700" fontSize="36" textAlign="center">
+          <Text ml={30} color="gray.700" fontSize={{base: "24", md: "36"}} textAlign="center">
             Então escolha seu continente
           </Text>
         </Flex>
@@ -93,8 +120,8 @@ export default function Home() {
           maxWidth="1440px"
           align="center"
           justify="center"
-          py="20"
-          height="800px"
+          py="4, 12, 20"
+          mb="4"
         >
           <Slide />
         </Flex>

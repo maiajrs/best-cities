@@ -2,11 +2,13 @@
   color: #ffba08 !important;
   margin-left: 2rem !important;
   width: 4px !important;
+  caret-color: rgba(0,0,0,0);
 }
 
 .swiper-button-next {
   color: #ffba08 !important;
   margin-right: 2rem !important;
+  caret-color: rgba(0,0,0,0);
 }
 
 .swiper-pagination-bullet-active {
@@ -22,6 +24,7 @@
   width: 100%;
   height: 100%;
 }
+
 
 .swiper-slide {
   text-align: center;
@@ -62,4 +65,13 @@
 
 .infoSlide p {
   font-size: 2rem;
+}
+
+@media(max-width: 768px) {
+  .infoSlide p {
+    font-size: 1rem;
+  }
+  .infoSlide h1 {
+    font-size: 2rem;
+  }
 }
