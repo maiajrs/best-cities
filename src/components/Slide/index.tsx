@@ -29,7 +29,7 @@ export default function Slide() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/images/europa/europa-capa.jpg" alt="europa" />
+          <img src="/images/europa/europa-capa.png" alt="europa" />
           <div className="infoSlide">
             <h1>Europa</h1>
             <p>O continente mais antigo</p>
@@ -37,7 +37,7 @@ export default function Slide() {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/images/america_sul/america-sul-capa.jpg"
+            src="/images/america_sul/america-sul.png"
             alt="america do sul"
           />
            <div className="infoSlide">
@@ -46,14 +46,14 @@ export default function Slide() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/images/africa/africa-capa.jpg" alt="africa" />
+          <img src="/images/africa/africa-capa.png" alt="africa" />
           <div className="infoSlide">
             <h1>África</h1>
             <p>Conhecida pela sua pluralidade étnica e cultural</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/images/oceania/oceania-capa.jpg" alt="oceania" />
+          <img src="/images/oceania/oceania-capa.png" alt="oceania" />
           <div className="infoSlide">
             <h1>Oceania</h1>
             <p>São mais de 10 mil ilhas e 14 países</p>
@@ -61,8 +61,7 @@ export default function Slide() {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            styles="width: 100%; "
-            src="/images/america_norte/america-norte-capa.jpg"
+            src="/images/america_norte/america-norte-capa.png"
             alt="america do norte"
           />
           <div className="infoSlide">
@@ -71,7 +70,7 @@ export default function Slide() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/images/asia/asia-capa.jpg" alt="asia" />
+          <img src="/images/asia/asia-capa.png" alt="asia" />
           <div className="infoSlide">
             <h1>Asia</h1>
             <p>O berço das mais antigas civilizações</p>
